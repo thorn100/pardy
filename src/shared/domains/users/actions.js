@@ -5,18 +5,17 @@ function users(initialState) {
 }
 
 function userCreate(state, user) {
-	User(user);
-
-	const localUser = Object.assign(
+	const id = user.id;
+	const localUser = User(Object.assign(
 		{},
-		state[user.id],
+		state[id],
 		user
-	);
+	));
 
 	return Object.assign(
 		{},
 		state,
-		{ [user.id]: user }
+		{ [id]: localUser }
 	);
 }
 
