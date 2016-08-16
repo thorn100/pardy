@@ -1,7 +1,7 @@
 (function () {
-	var socket = io('/');
+	const socket = io('/');
 
-	socket.on('log', function(val) {
-		console.log('log', val);
-	});
+	socket.on('log', val => console.log('server says:', val));
+
+	socket.emit('log', 'hey');
 }());

@@ -14,7 +14,7 @@ const {
 function createApp() {
 	const app = express();
 	const container = {
-		http: app.listen(PORT),
+		server: app.listen(PORT),
 		store: createStore(),
 		session: createSession({
 			resave: false,

@@ -2,7 +2,7 @@
 require('localenv');
 
 // Create application instance
-require('./src/server/app')();
+require('./server/app')();
 
 // Notify user
 console.log('Serving on port:', process.env.PORT);
